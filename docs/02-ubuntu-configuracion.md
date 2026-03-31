@@ -1,41 +1,77 @@
-# Ubuntu Server – Configuración Base
+# 02 - Configuración de Ubuntu Server (ubuntu-orea)
+Este documento describe la configuración base del servidor Ubuntu utilizado en el laboratorio de ciberseguridad. Incluye información del sistema, configuración de red mediante Netplan, estado del servicio SSH, pruebas de conectividad y evidencias.
 
-## 1. Datos generales
-- SO: Ubuntu Server 22.04
-- RAM: 4 GB
-- CPU: 2 cores
-- Disco: 40 GB
-- Fecha de creación: 22 Mar. 2026
+---
 
-## 2. Configuración de red
-- Adaptador 1: NAT
-- Adaptador 2: Host‑Only #7
-- Rango Host‑Only: 192.168.215.0/24
-- IP asignada: 192.168.215.20
-- Gateway: 192.168.215.1
-- DNS: 8.8.8.8
+# 🖥️ Información del sistema
 
-## 3. Archivo de configuración (Netplan)
-/etc/netplan/01-netcfg.yaml
+Sistema operativo: Ubuntu 22.04.5 LTS (Jammy Jellyfish)  
+RAM asignada: 6 GB  
+CPU: 2 vCPU  
+Disco virtual: 25 GB  
+Hostname: ubuntu-orea  
+Usuario principal: orea-arc  
 
-network:
-  version: 2
-  ethernets:
-    enp0s3:
-      addresses:
-        - 192.168.215.20/24
-      gateway4: 192.168.215.1
-      nameservers:
-        addresses:
-          - 8.8.8.8
+### 📄 Verificación del sistema operativo
 
-## 4. Comandos de verificación
-### ip a
-(agrega captura o salida)
+![version](screenshots/configuracionVMs/ubuntu/Version.png)
 
-## 5. Pruebas de conectividad
-- Ping a Kali: `ping 192.168.215.10` (OK)
+# 🌐 Configuración de red (Netplan)
 
-## 6. Snapshot asociado
-- Nombre: ubuntu-base-red-configurada
-- Fecha: (23 Mar. 2025)
+El servidor Ubuntu utiliza dos interfaces de red:
+
+- **enp0s3 (NAT):** DHCP habilitado  
+- **enp0s8 (Host‑Only):** IP estática `192.168.215.11/24`  
+
+Esta configuración permite:
+
+- Acceso a internet mediante NAT  
+- Comunicación directa con Kali Linux (`192.168.215.10`) mediante Host‑Only  
+
+---
+
+## 📄 Archivo Netplan
+
+![netplan](screenshots/configuracionVMs/ubuntu/Netplan.png)
+
+# 🔐 Servicio SSH
+
+El servicio SSH se encuentra:
+
+- Instalado  
+- Habilitado  
+- Activo (running)  
+- Escuchando en IPv4 e IPv6  
+- Aceptando conexiones desde Kali Linux (192.168.215.10)  
+
+## 📄 Verificación del servicio
+
+![ssh](screenshots/configuracionVMs/ubuntu/Ssh.png)
+
+# 🔄 Conectividad con Kali
+
+La comunicación entre ambas máquinas fue verificada mediante la red Host‑Only:
+
+- **Kali Linux:** 192.168.215.10  
+- **Ubuntu Server:** 192.168.215.11  
+
+## 📄 Prueba de ping desde Kali
+![ping](screenshots/configuracionVMs/ubuntu/Ping2.png)
+
+
+# 🧰 Herramientas instaladas
+
+Ubuntu cuenta únicamente con las herramientas base del sistema.  
+No se han instalado paquetes adicionales en esta fase inicial.
+
+---
+
+# 📌 Estado general
+
+El servidor **ubuntu-orea** está completamente funcional dentro del laboratorio:
+
+- Red configurada correctamente  
+- SSH operativo  
+- Conectividad con Kali confirmada  
+- Evidencias integradas  
+- Listo para integrarse con los proyectos del laboratorio  

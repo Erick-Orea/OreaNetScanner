@@ -1,50 +1,72 @@
-# Kali Linux – Configuración Base
+# 01 - Configuración de Kali Linux
 
-## 1. Datos generales
-- SO: Kali Linux Rolling
-- RAM: 4 GB
-- CPU: 2 cores
-- Disco: 40 GB
-- Fecha de creación: (tu fecha)
+Este documento describe la configuración base de la máquina Kali Linux utilizada en el laboratorio de ciberseguridad.
 
-## 2. Configuración de red
-- Adaptador 1: NAT
-- Adaptador 2: Host‑Only #7
-- Rango Host‑Only: 192.168.215.0/24
-- IP asignada: 192.168.215.10
-- Gateway: 192.168.215.1
-- DNS: 8.8.8.8
+---
 
-## 3. Comandos de verificación
-### ip a
+## 🖥️ Información del sistema
 
-┌──(kali㉿kali)-[~]
-└─$ ip a           
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host noprefixroute 
-       valid_lft forever preferred_lft forever
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether 08:00:27:58:9b:8c brd ff:ff:ff:ff:ff:ff
-    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute eth0
-       valid_lft 85874sec preferred_lft 85874sec
-    inet6 fd17:625c:f037:2:92d8:9068:5960:5216/64 scope global dynamic noprefixroute 
-       valid_lft 86216sec preferred_lft 14216sec
-    inet6 fe80::a692:d7a7:fe0b:d28e/64 scope link noprefixroute 
-       valid_lft forever preferred_lft forever
-3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether 08:00:27:d7:05:40 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.215.10/24 brd 192.168.215.255 scope global eth1
-       valid_lft forever preferred_lft forever
-    inet6 fe80::a00:27ff:fed7:540/64 scope link proto kernel_ll 
-       valid_lft forever preferred_lft forever
-                                                  
+- **Versión de Kali:** Kali GNU/Linux Rolling (2026.1)
+- **Tipo de instalación:** Máquina virtual preconfigurada de Kali (imagen oficial de Offensive Security)
+- **Recursos asignados:**
+  - RAM: 6144 MB
+  - CPU: 2 procesadores
+  - Disco:  40 GB 
 
-## 4. Pruebas de conectividad
-- Ping a Ubuntu: `ping 192.168.215.20` (OK)
+---
 
-## 5. Snapshot asociado
-- Nombre: kali-base-red-configurada
-- Fecha: 23 Mar. 2026
+## 🌐 Configuración de red
+
+La máquina Kali utiliza una configuración de red dual para permitir acceso a internet y comunicación interna con el servidor Ubuntu.
+
+- **Modo de red:** NAT + Host-Only
+- **Interfaz NAT (eth0):**
+  - IP: 10.0.2.15
+- **Interfaz Host-Only (eth1):**
+  - IP asignada: 192.168.215.10/24
+- **Comunicación con Ubuntu:**
+  - Verificada mediante `ping` hacia 192.168.215.11 (Ubuntu-server-arc)
+  - Conectividad estable y bidireccional
+
+---
+
+## 🔧 Herramientas base instaladas
+
+Kali incluye una gran cantidad de herramientas preinstaladas.  
+Para este laboratorio se consideran esenciales:
+
+- Nmap  
+- Net-tools  
+- Git  
+- Curl  
+- Wget  
+
+*(Si se instalan herramientas adicionales, se documentarán aquí.)*
+
+---
+
+## 📸 Evidencias
+ 
+- Salida de `ip a`
+
+![ip a](screenshots/configuracionVMs/kali/Salida_ip.png)
+
+
+- Salida de `cat /etc/os-release`
+![os-release](screenshots/configuracionVMs/kali/Salida_cat.png)
+
+
+- Prueba de ping hacia Ubuntu
+
+![ping](screenshots/configuracionVMs/kali/Ping.png)
+
+
+
+
+---
+
+## Notas adicionales
+
+- Máquina utilizada como estación principal de pentesting.  
+- Acceso SSH hacia Ubuntu configurado y probado.  
+- Configuración estable y lista para proyectos del laboratorio.  
