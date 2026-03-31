@@ -74,4 +74,4 @@ El servidor **ubuntu-orea** está completamente funcional dentro del laboratorio
 - SSH operativo  
 - Conectividad con Kali confirmada  
 - Evidencias integradas  
-- Listo para integrarse con los proyectos del laboratorio  
+- Configuración validada y operativa para uso en entornos de laboratorio  
