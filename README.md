@@ -15,13 +15,13 @@
 
 Permite identificar hosts activos, detectar puertos abiertos, obtener banners de servicios, analizar puertos UDP y realizar fingerprinting básico del sistema operativo mediante TTL.
 
-Este proyecto forma parte de un portafolio profesional orientado a roles de **TI** y **Ciberseguridad Jr.**
+Este proyecto forma parte de un portafolio profesional orientado a roles de **TI** y **Ciberseguridad.**
 
 ---
 
 ## 2. Vista General de la Herramienta
 
-![Menú principal](screenshots/menu.png)
+![Menú principal](docs/screenshots/menu.png)
 
 ---
 
@@ -31,7 +31,7 @@ Este proyecto forma parte de un portafolio profesional orientado a roles de **TI
 - Descubrimiento de hosts activos mediante ICMP.
 - Compatible con redes en formato CIDR.
 
-![Ping Sweep](screenshots/ping_sweep.png)
+![Ping Sweep](docs/screenshots/ping_sweep.png)
 
 ---
 
@@ -40,7 +40,7 @@ Este proyecto forma parte de un portafolio profesional orientado a roles de **TI
 - Banner grabbing automático.
 - Multithreading con ThreadPool (100 hilos).
 
-![Escaneo TCP](screenshots/tcp_scan.png)
+![Escaneo TCP](docs/screenshots/tcp_scan.png)
 
 ---
 
@@ -48,7 +48,7 @@ Este proyecto forma parte de un portafolio profesional orientado a roles de **TI
 - Identificación de puertos abiertos/filtrados.
 - Recepción de banners cuando es posible.
 
-![Escaneo UDP](screenshots/udp_scan.png)
+![Escaneo UDP](docs/screenshots/udp_scan.png)
 
 ---
 
@@ -56,19 +56,19 @@ Este proyecto forma parte de un portafolio profesional orientado a roles de **TI
 - Fingerprinting básico del sistema operativo (TTL).
 - Resultados combinados en un solo reporte.
 
-![Escaneo híbrido](screenshots/hybrid_scan.png)
+![Escaneo híbrido](docs/screenshots/hybrid_scan.png)
 
 ---
 
 ### 🔹 Logging Profesional
 
-![Logs](screenshots/logs.png)
+![Logs](docs/screenshots/logs.png)
 
 ---
 
 ### 🔹 Exportación de Resultados
 
-![Exportaciones](screenshots/exports.png)
+![Exportaciones](docs/screenshots/exports.png)
 
 Formatos soportados:
 - `.txt`
@@ -110,6 +110,16 @@ Formatos soportados:
         hybrid_scan.png
         logs.png
         exports.png
+        /configuracionVMs
+            /kali
+                Ping.png
+                Salida_cat.png
+                Salida_ip_a.png
+            /ubuntu
+                Netplan.png
+                Ping.png
+                Ssh.png
+                Version.png
 
 /logs
     .gitignore
@@ -133,7 +143,7 @@ LICENSE
 ### Instalación
 ```bash
 git clone https://github.com/Erick-Orea/OreaNetScanner.git
-cd oreanetscanner
+cd OreaNetScanner
 ```
 
 ### Ejecución
@@ -184,8 +194,8 @@ Rango: 1–1024
 ## 9. Autor
 
 **Erick de Jesús Hernández Orea**  
-TI & Cybersecurity Jr.  
-Desarrollador de herramientas de seguridad y automatización.
+TI & Cybersecurity.  
+Desarrollo de herramientas de seguridad y automatización.
 
 ---
 
