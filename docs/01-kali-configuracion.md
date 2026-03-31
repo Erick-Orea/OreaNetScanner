@@ -36,7 +36,7 @@ La máquina Kali utiliza una configuración de red dual para permitir acceso a i
 # 📸 Evidencias
 
 ## Salida de `ip a`
-![Salidaipa](screenshots/configuracionVMs/kali/Salida_ip.png)  
+![Salidaipa](screenshots/configuracionVMs/kali/Salida_ip_a.png)  
 
 ## Salida de `cat /etc/os-release`
 ![Salidacat](screenshots/configuracionVMs/kali/Salida_cat.png)  
