@@ -21,7 +21,7 @@ Este proyecto forma parte de un portafolio profesional orientado a roles de **TI
 
 ## 2. Vista General de la Herramienta
 
-![Menú principal](docs/screenshots/menu.png)
+![Menú principal](screenshots/menu.png)
 
 ---
 
@@ -31,7 +31,7 @@ Este proyecto forma parte de un portafolio profesional orientado a roles de **TI
 - Descubrimiento de hosts activos mediante ICMP.
 - Compatible con redes en formato CIDR.
 
-![Ping Sweep](docs/screenshots/ping_sweep.png)
+![Ping Sweep](screenshots/ping_sweep.png)
 
 ---
 
@@ -40,7 +40,7 @@ Este proyecto forma parte de un portafolio profesional orientado a roles de **TI
 - Banner grabbing automático.
 - Multithreading con ThreadPool (100 hilos).
 
-![Escaneo TCP](docs/screenshots/tcp_scan.png)
+![Escaneo TCP](screenshots/tcp_scan.png)
 
 ---
 
@@ -48,7 +48,7 @@ Este proyecto forma parte de un portafolio profesional orientado a roles de **TI
 - Identificación de puertos abiertos/filtrados.
 - Recepción de banners cuando es posible.
 
-![Escaneo UDP](docs/screenshots/udp_scan.png)
+![Escaneo UDP](screenshots/udp_scan.png)
 
 ---
 
@@ -56,19 +56,19 @@ Este proyecto forma parte de un portafolio profesional orientado a roles de **TI
 - Fingerprinting básico del sistema operativo (TTL).
 - Resultados combinados en un solo reporte.
 
-![Escaneo híbrido](docs/screenshots/hybrid_scan.png)
+![Escaneo híbrido](screenshots/hybrid_scan.png)
 
 ---
 
 ### 🔹 Logging Profesional
 
-![Logs](docs/screenshots/logs.png)
+![Logs](screenshots/logs.png)
 
 ---
 
 ### 🔹 Exportación de Resultados
 
-![Exportaciones](docs/screenshots/exports.png)
+![Exportaciones](screenshots/exports.png)
 
 Formatos soportados:
 - `.txt`
@@ -132,7 +132,7 @@ LICENSE
 
 ### Instalación
 ```bash
-git clone https://github.com/tuusuario/oreanetscanner.git
+git clone https://github.com/Erick-Orea/OreaNetScanner.git
 cd oreanetscanner
 ```
 

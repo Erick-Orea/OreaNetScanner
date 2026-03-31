@@ -20,7 +20,7 @@ Este documento explica cómo instalar, ejecutar y utilizar **OreaNet Scanner**.
 ## 3. Instalación
 
 ```bash
-git clone https://github.com/tuusuario/oreanetscanner.git
+git clone https://github.com/Erick-Orea/OreaNetScanner.git
 cd oreanetscanner
 python3 src/oreanet_scanner.py
 ```
