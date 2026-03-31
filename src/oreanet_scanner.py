@@ -6,8 +6,9 @@
 # OreaNet Scanner - Network Scanner Profesional
 # Autor: Erick de Jesús Hernández Orea
 # Descripción:
-#   Herramienta de reconocimiento activo para análisis de red.
-#   Versión inicial del proyecto de portafolio.
+#   Herramienta de reconocimiento activo para análisis de red,
+#   desarrollada con arquitectura modular y soporte para TCP, UDP
+#   y fingerprinting básico de sistema operativo.
 # ============================================================
 
 import socket
@@ -89,7 +90,6 @@ def detect_os(ip):
             os_name = "Linux/Unix"
         elif ttl <= 128:
             os_name = "Windows"
-            # Nota: algunos dispositivos de red también usan 128
         else:
             os_name = "Cisco/BSD/Solaris"
 
@@ -303,7 +303,6 @@ def scan_hybrid(ip, ports):
 
     os_detected = detect_os(ip)
 
-    # En híbrido NO exportamos por separado TCP/UDP, solo al final
     tcp_open = scan_ports(ip, ports, export_results=False)
     udp_open, udp_banners = scan_udp_ports(ip, ports, export_results=False)
 
