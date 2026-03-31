@@ -36,13 +36,13 @@ La máquina Kali utiliza una configuración de red dual para permitir acceso a i
 # 📸 Evidencias
 
 ## Salida de `ip a`
-screenshots/configuracionVMs/kali/Salida_ip.png  
+![Salidaipa](screenshots/configuracionVMs/kali/Salida_ip.png)  
 
 ## Salida de `cat /etc/os-release`
-screenshots/configuracionVMs/kali/Salida_cat.png  
+![Salidacat](screenshots/configuracionVMs/kali/Salida_cat.png)  
 
 ## Prueba de ping hacia Ubuntu
-screenshots/configuracionVMs/kali/Ping.png  
+![salidaping](screenshots/configuracionVMs/kali/Ping.png)  
 
 # 📝 Notas adicionales
 - Kali funciona como estación principal de pentesting dentro del laboratorio.  
