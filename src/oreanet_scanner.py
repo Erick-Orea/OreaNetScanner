@@ -58,7 +58,7 @@ def show_banner():
 
           Herramienta de Reconocimiento Activo y Análisis de Puertos
 
-                  Desarrollado por Erick de Jesus H. Orea
+                  Desarrollado por Erick de Jesús Hernández Orea
 
 """)
 
